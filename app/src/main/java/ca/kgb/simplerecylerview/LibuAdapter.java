@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.support.design.widget.Snackbar;
 
 import org.w3c.dom.Text;
 
@@ -45,6 +46,7 @@ public class LibuAdapter extends RecyclerView.Adapter<LibuAdapter.ViewHolder> {
 //                        .setAction("Undo", mListener)
 //                        .setActionTextColor(Color.RED)
 //                        .show();
+
             }
         }
         //create interface listener for my objects
@@ -66,6 +68,10 @@ public class LibuAdapter extends RecyclerView.Adapter<LibuAdapter.ViewHolder> {
 
             @Override
             public void onTextViewListener(View caller) {
+                Snackbar snackbar = Snackbar
+                        .make(caller, "Snackbar chez Raymon", Snackbar.LENGTH_SHORT);
+
+                snackbar.show();
                 Log.d(TAG, "onTextViewListener: " + "We are in my recycle view listener");
             }
         });
@@ -79,6 +85,7 @@ public class LibuAdapter extends RecyclerView.Adapter<LibuAdapter.ViewHolder> {
 
         TextView textView = holder.textViewName;
         textView.setText(string);
+
 
         //holder.textViewName.setText(mDataSet[position]);
     }
