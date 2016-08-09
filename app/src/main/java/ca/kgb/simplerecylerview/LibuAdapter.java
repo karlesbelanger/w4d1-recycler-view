@@ -41,10 +41,10 @@ public class LibuAdapter extends RecyclerView.Adapter<LibuAdapter.ViewHolder> {
         public void onClick(View view) {
             if(view instanceof TextView){
                 mListener.onTextViewListener(view);
-                Snackbar.make(findViewById(android.R.id.content), "Snackbar chez Raymon", Snackbar.LENGTH_LONG)
-                        .setAction("Undo", mListener)
-                        .setActionTextColor(Color.RED)
-                        .show();
+//                Snackbar.make(findViewById(android.R.id.content), "Snackbar chez Raymon", Snackbar.LENGTH_LONG)
+//                        .setAction("Undo", mListener)
+//                        .setActionTextColor(Color.RED)
+//                        .show();
             }
         }
         //create interface listener for my objects
